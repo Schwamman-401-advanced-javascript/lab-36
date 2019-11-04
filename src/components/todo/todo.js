@@ -35,6 +35,7 @@ class ToDo extends React.Component {
     const defaults = { _id: uuid(), complete:false };
     const item = Object.assign({}, this.state.item, defaults);
 
+
     this.setState(state => ({
       todoList: [...state.todoList, item],
       item: {},
@@ -46,16 +47,6 @@ class ToDo extends React.Component {
 
     this.setState(state => ({
       todoList: state.todoList.filter(item => item._id !== id),
-    }));
-
-  };
-
-  saveItem = updatedItem => {
-
-    this.setState(state => ({
-      todoList: state.todoList.map(item =>
-        item._id === updatedItem._id ? updatedItem : item
-      ),
     }));
 
   };
