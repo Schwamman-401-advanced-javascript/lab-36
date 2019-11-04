@@ -9,13 +9,13 @@ export function reducer(state = initialState, action = {}) {
     case 'deleteItem': 
       return { 
           todoList: state.todoList
-              .filter(item => item._id !== id) 
+              .filter(item => item._id !== action.payload) 
       };
     case 'toggleComplete':
       return {
         todoList: state.todoList
           .map(item =>
-            item._id === id ? { ...item, complete: !item.complete, } : item
+            item._id === action.payload ? { ...item, complete: !item.complete, } : item
         )
     }
   }
