@@ -63,8 +63,8 @@ class ToDo extends React.Component {
   };
 
   toggleDetails = id => {
-    this.setState(state => {
-      let item = state.todoList.find(item => item._id === id);
+    let item = state.todoList.find(item => item._id === id);
+    this.setState(state => {  
       return {
         details: item || {},
         showDetails: !!item,

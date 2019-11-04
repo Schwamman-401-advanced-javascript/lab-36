@@ -18,6 +18,8 @@ export function reducer(state = initialState, action = {}) {
             item._id === action.payload ? { ...item, complete: !item.complete, } : item
         )
     }
+    default:
+      return state;
   }
 }
 

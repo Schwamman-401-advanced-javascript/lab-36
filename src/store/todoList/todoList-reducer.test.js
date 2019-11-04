@@ -1,6 +1,5 @@
-import { initialState, reducer } from './todoList-reducer';
+import { reducer } from './todoList-reducer';
 import { addItem, deleteItem, toggleComplete } from './todoList-reducer';
-import { exportAllDeclaration } from '@babel/types';
 
 describe('TodoList Reducer', () => {
   it('can add an item', () => {
