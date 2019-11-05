@@ -1,9 +1,9 @@
-export const initialState = { item: {} };
+export const initialState = {};
 
 export function reducer(state = initialState, action = {}) {
   switch(action.type) {
     case 'modifyItem':
-      return {item: {...state.item, [action.name]: action.value}};
+      return {...state, [action.name]: action.value};
     case 'resetItem':
       return initialState;
     default:

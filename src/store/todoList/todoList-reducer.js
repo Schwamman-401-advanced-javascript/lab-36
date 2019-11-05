@@ -1,21 +1,13 @@
-export const initialState = { todoList: [] };
+export const initialState = [];
 
 export function reducer(state = initialState, action = {}) {
   switch(action.type) {
     case 'addItem':
-      return { todoList: [...state.todoList, action.payload] };
+      return [...state, action.payload];
     case 'deleteItem': 
-      return { 
-          todoList: state.todoList
-              .filter(item => item._id !== action.payload) 
-      };
+      return state.filter(item => item._id !== action.payload);
     case 'toggleComplete':
-      return {
-        todoList: state.todoList
-          .map(item =>
-            item._id === action.payload ? { ...item, complete: !item.complete, } : item
-        )
-    }
+      return state.map(item => item._id === action.payload ? { ...item, complete: !item.complete, } : item);
     default:
       return state;
   }

@@ -120,9 +120,9 @@ function toDo(props) {
 function mapStateToProps(state) {
   console.log(state);
   return {
-    todoList: state.todoList.todoList,
+    todoList: state.todoList,
     details: state.details,
-    item: state.item.item,
+    item: state.item,
   };
 }
 
