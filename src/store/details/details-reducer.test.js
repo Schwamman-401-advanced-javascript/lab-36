@@ -1,6 +1,5 @@
 import { reducer, initialState } from './details-reducer';
 import { toggleDetails } from './details-reducer';
-import { exportAllDeclaration } from '@babel/types';
 
 describe('Details Reducer', () => {
 

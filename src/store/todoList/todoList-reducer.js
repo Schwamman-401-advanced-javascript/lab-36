@@ -1,8 +1,6 @@
 export const initialState = { todoList: [] };
 
 export function reducer(state = initialState, action = {}) {
-  console.log('reducer', state, action);
-
   switch(action.type) {
     case 'addItem':
       return { todoList: [...state.todoList, action.payload] };
